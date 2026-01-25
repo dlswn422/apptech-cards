@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ================================
+   Pretendard Font (Local)
+   ================================ */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ================================
+   Base Layout
+   ================================ */
+html {
+  background-color: #f4f7fb; /* 전체 배경 */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    Arial,
+    sans-serif;
+
+  color: #0f172a; /* slate-900 */
+  letter-spacing: -0.015em;
+  line-height: 1.6;
+}
+
+/* ================================
+   Typography Polish
+   ================================ */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  word-break: keep-all;
+}
+
+/* 보조 텍스트 */
+.text-muted {
+  color: #64748b; /* slate-500 */
+}
+
+/* ================================
+   Interaction
+   ================================ */
+/* 모바일 탭 하이라이트 제거 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 버튼/링크 클릭 시 깔끔 */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ================================
+   Smooth Rendering
+   ================================ */
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
