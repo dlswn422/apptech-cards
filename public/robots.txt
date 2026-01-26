@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apptech-cards.vercel.app/sitemap.xml
