@@ -1,6 +1,22 @@
 import { AppEvent } from "@/types/app";
 
 export const apps: AppEvent[] = [
+  
+  // ─────────────────────────
+  // 이벤트유
+  // ─────────────────────────
+  {
+    id: "eventypu",
+    name: "이벤트유",
+    description: "신규가입 추천인 이벤트",
+    time: "1분",
+    condition: "신규가입",
+    reward: "링크로 확인",
+    link: "https://iryan.kr/t8f3k1z5lf",
+    refCode: "82GD5GGG",
+    logo: "/logos/brandary.png",
+  },
+
   // ─────────────────────────
   // 브랜더리
   // ─────────────────────────
@@ -27,7 +43,6 @@ export const apps: AppEvent[] = [
     condition: "신규가입",
     reward: "링크로 확인",
     link: "https://tinyurl.com/425y2yrb",
-    refCode: "425y2yrb",
     logo: "/logos/findingall.png",
   },
 
