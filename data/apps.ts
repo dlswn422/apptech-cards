@@ -48,6 +48,20 @@ export const apps: AppEvent[] = [
   },
 
   // ─────────────────────────
+  // 파인딩올
+  // ─────────────────────────
+  {
+    id: "filemaru",
+    name: "파일마루",
+    description: "신규가입 포인트 지급",
+    time: "1분",
+    condition: "신규가입",
+    reward: "링크로 확인",
+    link: "https://alred.me/t7q2chd7tv",
+    logo: "/logos/findingall.png",
+  },
+
+  // ─────────────────────────
   // 모니모
   // ─────────────────────────
   {
