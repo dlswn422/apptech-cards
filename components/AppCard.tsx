@@ -1,8 +1,26 @@
 "use client";
 
 import { AppEvent } from "@/types/app";
+import { useState } from "react";
 
 export default function AppCard({ app }: { app: AppEvent }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.preventDefault(); // 카드 링크 이동 방지
+    e.stopPropagation();
+
+    if (!app.refCode) return;
+
+    try {
+      await navigator.clipboard.writeText(app.refCode);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (err) {
+      console.error("복사 실패", err);
+    }
+  };
+
   return (
     <a
       href={app.link}
@@ -56,6 +74,35 @@ export default function AppCard({ app }: { app: AppEvent }) {
         <div>⏱ {app.time} 소요</div>
         <div>🆕 {app.condition}</div>
       </div>
+
+      {/* Referral Code */}
+      {app.refCode && (
+        <div
+          onClick={handleCopy}
+          className="
+            relative mt-4
+            flex items-center justify-between
+            rounded-xl border border-dashed border-blue-300
+            bg-blue-50 px-4 py-3
+            cursor-pointer
+            transition-all
+            hover:bg-blue-100
+          "
+        >
+          <div className="text-sm text-slate-600">
+            추천 코드
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-sm font-bold text-blue-700">
+              {app.refCode}
+            </span>
+            <span className="text-xs text-blue-600">
+              {copied ? "복사됨 ✓" : "복사"}
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* Reward + CTA */}
       <div className="relative mt-6 flex items-center justify-between">

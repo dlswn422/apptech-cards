@@ -43,6 +43,7 @@ export const apps: AppEvent[] = [
     condition: "신규가입",
     reward: "링크로 확인",
     link: "https://tinyurl.com/425y2yrb",
+    refCode: "MOONSS",
     logo: "/logos/findingall.png",
   },
 
