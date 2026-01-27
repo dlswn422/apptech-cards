@@ -13,7 +13,7 @@ export const apps: AppEvent[] = [
     condition: "신규가입",
     reward: "링크로 확인",
     link: "https://iryan.kr/t8f3k1z5lf",
-    refCode: "82GD5GGG",
+    refCode: "CVV68CBX43",
     logo: "/logos/brandary.png",
   },
 
