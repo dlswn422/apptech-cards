@@ -3,20 +3,6 @@ import { AppEvent } from "@/types/app";
 export const apps: AppEvent[] = [
   
   // ─────────────────────────
-  // 케이메이트
-  // ─────────────────────────
-  {
-    id: "kate",
-    name: "케이메이트",
-    description: "신규가입 추천인 이벤트",
-    time: "1분",
-    condition: "신규가입",
-    reward: "링크로 확인",
-    link: "https://iryan.kr/t7q2cjtny7",
-    logo: "/logos/brandary.png",
-  },
-
-  // ─────────────────────────
   // 이벤트유
   // ─────────────────────────
   {
